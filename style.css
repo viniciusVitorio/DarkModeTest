@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    transition: background .5s;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container.active{
+
+    background: #000;
+    
+}
+
+.btn{
+    width: 200px;
+    height: 90px;
+    border: 5px solid black;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+.circulo{
+    width: 200px;
+    height: 200px;
+    background: black;
+    border-radius: 100%;
+    transition: background .5s;
+
+}
+
+.btn:before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: left .5s;
+}
+
+.btn.active:before{
+    left: 115px;  
+    background: white;
+}
+
+
+.btn.active{
+    border: 5px solid white;
+}
+
+.circulo.active{
+    background:white;
+    transition: background .5s;
+
+}
